@@ -1,3 +1,1 @@
-# ONLS
-
-Trabalhos e exercícios de Otimização Não Linear de Sistemas
+# ONLS - em construção
