@@ -45,13 +45,13 @@
        
         %% Passo 1 - Computa o passo de Newton e decremento
         % Cálculo do gradiente e hessiana
-        VGrad = vpa(subs(grad,[x1,x2],x));
+        VGrad = vpa(subs(grad,[x1,x2],x))
         VHess = vpa(subs(hess,[x1,x2],x));        
         
         
         %% Passo 2 - Critério de parada
-        DeltaX = (-inv(VHess) * VGrad')';
-        lambda = VGrad * inv(VHess) * VGrad';
+        DeltaX = (-pinv(VHess) * VGrad')';
+        lambda = VGrad * pinv(VHess) * VGrad';
                 
         if (lambda/2) <= n
             break;
